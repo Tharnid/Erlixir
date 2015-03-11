@@ -1,0 +1,2 @@
+defmodule TharnWeather do
+end
