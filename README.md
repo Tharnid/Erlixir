@@ -10,6 +10,13 @@
        list1 = [3, 2, 1]
        list ] [ 4 | list1 ]
 
+#### Run a file
+---
+
+- iex **{ Name of file }**
+
+---
+
 ---
 
 ### Erlang Stuff
