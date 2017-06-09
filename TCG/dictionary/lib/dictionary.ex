@@ -4,12 +4,15 @@ defmodule Dictionary do
   end
 
   def random_word() do # takes param I believe
-    Enum.random(word_list())
+    #Enum.random(word_list())
+    word_list()
+    |> Enum.random()
   end
 
   def word_list do
-    contents = File.read!("assets/words.txt")
-    list     = String.split(contents, ~r/\n/)
+    "assets/words.txt"
+    |> File.read!()
+    |> String.split(~r/\n/)
   end
 
   def random_quote do
