@@ -112,3 +112,7 @@ Erlang considers all string to be binary bytes or binary....but binary = string!
 	
 	Lists.map([1,2,3], &(&1*&1*&1))
 	
+**Mix.exs is like a config file for application**
+
+(__DIR__)
+	
