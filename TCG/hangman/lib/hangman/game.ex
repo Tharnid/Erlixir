@@ -12,4 +12,7 @@ defmodule Hangman.Game  do
   }
   end
 
+  def make_move(game, guess) do
+    
+  end
 end
