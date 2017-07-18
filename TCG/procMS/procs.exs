@@ -1,12 +1,16 @@
 defmodule Procs do
 
-  def greeter() do
+  def greeter(count) do
     receive do
+        { :add, n } ->
+          greeter(count + n)
       msg ->
-        IO.puts "Hello #{inspect msg}"
+        # IO.puts "Hello #{inspect msg}"
+        IO.puts "#{count}: Hello #{inspect msg}}"
+        greeter(count)
     end
     # Process.sleep(1000)
-    greeter()
+    # greeter(count + 2)
   end
 
 end
