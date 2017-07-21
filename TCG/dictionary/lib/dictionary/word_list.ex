@@ -1,12 +1,12 @@
 defmodule Dictionary.WordList do
 
   def start_link() do
-    Agent.start_link(&word_list/0)
+    Agent.start_link(&word_list/0, name: :ylix)
   end
 
-  def random_word(agent) do # takes param I believe
+  def random_word() do # takes param I believe
     # |> Enum.random()
-    Agent.get(agent, &Enum.random/1) # list of words
+    Agent.get(:ylix, &Enum.random/1) # list of words
   end
 
   def word_list do
