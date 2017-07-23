@@ -13,3 +13,5 @@ pid = spawn_link Proces, :greeter, [0] # both will die
  Agent.update(pid, fn count -> count + 1 end)
 
  Agent.get_and_update(pid, fn state -> { state, state +1 } end)
+
+ # Nanny(supervisors) can look after processes and other supervisors
