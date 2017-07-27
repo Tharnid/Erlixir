@@ -1,12 +1,18 @@
 defmodule Dictionary.WordList do
 
+  @me __MODULE__
+
   def start_link() do
-    Agent.start_link(&word_list/0, name: :ylix)
+    Agent.start_link(&word_list/0, name: @me)
   end
 
   def random_word() do # takes param I believe
     # |> Enum.random()
-    Agent.get(:ylix, &Enum.random/1) # list of words
+    if :rand.uniform < 0.33 do
+      # Agent.get(:ylix, &Enum.random/1) # list of words
+      Agent.get(@me, fn _ -> exit(:boom) end)
+    end
+    Agent.get(@me, &Enum.random/1)
   end
 
   def word_list do
