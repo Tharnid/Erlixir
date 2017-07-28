@@ -15,3 +15,10 @@ pid = spawn_link Proces, :greeter, [0] # both will die
  Agent.get_and_update(pid, fn state -> { state, state +1 } end)
 
  # Nanny(supervisors) can look after processes and other supervisors
+
+# Gen Server
+---
+
+- Key part of Erlang OTP
+- Abstraction of generic Server
+- 2 sets of API's
