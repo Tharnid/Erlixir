@@ -22,3 +22,5 @@ pid = spawn_link Proces, :greeter, [0] # both will die
 - Key part of Erlang OTP
 - Abstraction of generic Server
 - 2 sets of API's
+
+Genserver.call(pid, { :make_move, "a"})
