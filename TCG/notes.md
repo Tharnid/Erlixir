@@ -24,3 +24,9 @@ pid = spawn_link Proces, :greeter, [0] # both will die
 - 2 sets of API's
 
 Genserver.call(pid, { :make_move, "a"})
+
+# New call
+Hangman2.make_move(g1, "a")
+
+# latest call
+Hangman2.make_move("g")

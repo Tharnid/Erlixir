@@ -2,7 +2,9 @@ defmodule Hangman2 do
 
   # defdelegate new_game(),             to: Game
   def new_game() do
-    Hangman2.Server.start_link()
+    # Hangman2.Server.start_link()
+    { :ok, pid } = Supervisor.start_child(Hangman2.Supervisor, [])
+    pid
   end
   #defdelegate tally(game),            to: Game
   def tally(game_pid) do

@@ -13,7 +13,12 @@ defmodule Hangman2.Mixfile do
 
   def application do
     # Specify extra applications you'll use from Erlang/Elixir
-    [extra_applications: [:logger]]
+    [
+      mod: { Hangman2.Application, [] },
+      extra_applications: [
+        :logger
+      ]
+    ]
   end
 
   defp deps do
