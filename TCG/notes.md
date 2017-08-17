@@ -30,3 +30,6 @@ Hangman2.make_move(g1, "a")
 
 # latest call
 Hangman2.make_move("g")
+
+# Nodes and Naming
+====
