@@ -58,3 +58,8 @@ Node.list
 Process creation, Linking, Monitoring, Message passing
 
 ..once nodes are talking they will automatically send pid's
+
+# running TextClient
+mix run -e TextClient.start
+
+HMMMM
