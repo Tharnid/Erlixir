@@ -33,3 +33,28 @@ Hangman2.make_move("g")
 
 # Nodes and Naming
 ====
+
+Short name: fred@quarry / Host name
+Long name: wilma@auarry.bedrock.com / FQDN
+
+- use short names if your nodes are on the same computer
+- use long names otherwise
+
+* can't mix the two!!! *
+
+--sname whatever
+
+--name whatever
+
+** Nodes will connect first it references another **
+Node.connect(:node@myhost)
+
+Node.list
+
+** transitive all end up connected **
+
+** Large networks not a good idea to have all nodes connected **
+
+Process creation, Linking, Monitoring, Message passing
+
+..once nodes are talking they will automatically send pid's
