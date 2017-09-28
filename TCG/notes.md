@@ -62,4 +62,8 @@ Process creation, Linking, Monitoring, Message passing
 # running TextClient
 mix run -e TextClient.start
 
-HMMMM
+# after adding nodes use sudo to start project
+
+
+## Phoenix
+---
