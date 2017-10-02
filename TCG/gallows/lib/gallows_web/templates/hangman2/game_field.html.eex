@@ -1,9 +1,8 @@
-Game Field
+<%= game_state(@tally.game_state) %>
+
 <br />
 <br />
-<%= inspect @tally %>
-<br />
-<br />
+
 <p>
   Turns left: <%= @tally.turns_left %>
 </p>
@@ -12,11 +11,15 @@ Game Field
   Word so far: <%= @tally.letters |> Enum.join(" ") %>
 </p>
 
-<%= form_for(@conn, hangman2_path(@conn, :make_move), [ as: :make_move, method: :put ], fn f -> %>
+<%= if game_over?(@tally) do %>
+  <%= new_game_button(@conn) %>
+<% else %>
+  <%= form_for(@conn, hangman2_path(@conn, :make_move), [ as: :make_move, method: :put ], fn f -> %>
 
-<%= text_input(f, :guess) %>
-<%= submit("Make next move") %>
+  <%= text_input(f, :guess) %>
+  <%= submit("Make next move") %>
 
-<% end) %>
+  <% end) %>
+<% end %>
 
 </form>
