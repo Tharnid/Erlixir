@@ -115,4 +115,8 @@ Erlang considers all string to be binary bytes or binary....but binary = string!
 **Mix.exs is like a config file for application**
 
 (__DIR__)
+
+	defdelegate not a function in this module delegated to another 	module
+	
+	map is an open structure is dynamic...but not good if you need 
 	

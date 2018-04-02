@@ -13,7 +13,7 @@ config :logger, level: :warn
 config :socket_gallows, SocketGallows.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
-  password: "postgres",
+  password: "Ylix12ylix",
   database: "socket_gallows_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
