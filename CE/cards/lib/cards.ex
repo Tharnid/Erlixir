@@ -8,12 +8,30 @@ defmodule Cards do
   # list of playing cards
   def create_deck do
     values = ["Ace", "King", "Two", "Three", "Four", "Five"]
-    suits = ["Spaces", "Clubs", "Hearts", "Diamonds"]
+    suits = ["Spades", "Clubs", "Hearts", "Diamonds"]
 
     # iterate over collection elements
     # list comprehension
-    for suit <- suits do # essentially a mapping function
-      "Is this a map?"
+    # for value <- values do 
+
+    #   for suit <- suits do # essentially a mapping function
+    #     "#{value} of #{suit}"
+    #   end
+
+    # end      
+
+    # not a bad solution
+    # cards = for value <- values do
+    #   for suit <- suits do
+    #     "#{value} of #{suit}"
+    #   end
+    # end
+
+    # List.flatten(cards)
+
+    # best version
+    for suit <- suits, value <- values do
+      "#{value} of #{suit}"
     end
   end
   # from iex recompile or r...c
