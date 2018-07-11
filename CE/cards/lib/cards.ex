@@ -47,4 +47,12 @@ defmodule Cards do
     Enum.member?(deck, card)
   end
 
+  def deal(deck, hand_size) do
+    Enum.split(deck, hand_size) # hand is always index 0
+  end
 end
+
+# Cards.deal(deck, 5) { *hand*, *deck* }
+# Cards.deal(deck, 5) { hand: [], deck: []}
+
+# pattern matching is elixirs replacement for assignment
