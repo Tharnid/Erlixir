@@ -50,6 +50,12 @@ defmodule Cards do
   def deal(deck, hand_size) do
     Enum.split(deck, hand_size) # hand is always index 0 Pattern Matching
   end
+
+  # save a deck to FS
+  def save(deck, filename) do
+    binary = :erlang.term_to_binary(deck)
+    File.write(filename, binary)
+  end
 end
 
 # Cards.deal(deck, 5) { *hand*, *deck* }
