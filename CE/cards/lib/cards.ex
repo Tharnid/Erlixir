@@ -56,6 +56,24 @@ defmodule Cards do
     binary = :erlang.term_to_binary(deck)
     File.write(filename, binary)
   end
+
+  # reloading file...pattern matching again
+
+  # { status, binary } = File.read("my_deck")
+
+  # :erlang.binary_to_term(binary) // converts back to list of strings
+
+  def load(filename) do # Cards.load("my_deck")
+    {status, binary} = File.read(filename)
+    
+    case status do
+      :ok -> :erlang.binary_to_term binary
+      :error -> "That file does not exist"
+    end
+    # :erlang.binary_to_term binary # loads deck
+    # handle error message tuple (:atom, :atom) symbol
+  end
+
 end
 
 # Cards.deal(deck, 5) { *hand*, *deck* }
