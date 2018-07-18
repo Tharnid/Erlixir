@@ -11,3 +11,5 @@ Version examples section is nice!!!
 mix deps.get
 
 CH6!!!!
+
+mix phx.new.web auction_web

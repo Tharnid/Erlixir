@@ -1,0 +1,19 @@
+<%# <div class="jumbotron">
+
+</div> %>
+
+<div class="container">
+  <%= for item <- @items do %>
+    <li>
+      <strong><%= item.title  %></strong>: <%= item.description %>
+    </li>
+  <% end %>
+</div>
+
+<div class="row marketing">
+  <div class="col-lg-6">
+  </div>
+
+  <div class="col-lg-6">
+  </div>
+</div>
