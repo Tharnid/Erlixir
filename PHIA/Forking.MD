@@ -13,3 +13,12 @@ mix deps.get
 CH6!!!!
 
 mix phx.new.web auction_web
+
+mix ecto.gen.migration create_items
+
+mix ecto.migrations
+
+mix ecto.migrate
+mix ecto.rollback
+
+Auction.get_item(1)
