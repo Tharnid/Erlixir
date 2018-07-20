@@ -22,3 +22,18 @@ mix ecto.migrate
 mix ecto.rollback
 
 Auction.get_item(1)
+
+
+item = Auction.list_items() |> Enum.at(0)
+
+Auction.Item.changeset(item)
+
+### Attempting to change the title
+
+Auction.Item.changeset(item, %{title: "An updated title"})
+
+# updating record
+
+item = Auction.list_items() |> Enum.at(0)
+    
+
