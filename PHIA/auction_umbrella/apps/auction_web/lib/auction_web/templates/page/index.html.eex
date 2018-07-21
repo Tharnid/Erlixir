@@ -3,17 +3,21 @@
 </div> %>
 
 <div class="container">
-  <%= for item <- @items do %>
-    <li>
-      <strong><%= item.title  %></strong>: <%= item.description %>
-    </li>
-  <% end %>
+  <ul>
+    <%= for item <- @items do %>
+      <li>
+        <strong><%= link item.title, to: item_path(@conn, :show, item) %></strong>
+        <strong></strong>: <%= item.description %>
+      </li>
+    <% end %>  
+  </ul>
 </div>
 
+<%# 
 <div class="row marketing">
   <div class="col-lg-6">
   </div>
 
   <div class="col-lg-6">
   </div>
-</div>
+</div> %>

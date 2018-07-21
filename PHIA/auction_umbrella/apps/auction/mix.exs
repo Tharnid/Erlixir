@@ -24,7 +24,9 @@ defmodule Auction.MixProject do
     [
       {:ecto, "~> 2.2.7"},
       {:postgrex, "~> 0.13.5"},
-      {:uuid, "~> 1.1"}
+      {:uuid, "~> 1.1"},
+      {:comeonin, "~> 4.1"},
+      {:bcrypt_elixir, "~> 1.0"}
     ]
   end
 end
