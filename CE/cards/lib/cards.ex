@@ -63,21 +63,32 @@ defmodule Cards do
 
   # :erlang.binary_to_term(binary) // converts back to list of strings
 
-  def load(filename) do # Cards.load("my_deck")
-    {status, binary} = File.read(filename)
+  # def load(filename) do # Cards.load("my_deck")
+  #   {status, binary} = File.read(filename)
     
-    case status do
-      :ok -> :erlang.binary_to_term binary
-      :error -> "That file does not exist"
-    end
-    # :erlang.binary_to_term binary # loads deck
-    # handle error message tuple (:atom, :atom) symbol
-  end
+  #   case status do
+  #     :ok -> :erlang.binary_to_term binary
+  #     :error -> "That file does not exist"
+  #   end
+  #   # :erlang.binary_to_term binary # loads deck
+  #   # handle error message tuple (:atom, :atom) symbol
+  # end
 
+  def load(filename) do # Cards.load("my_deck")
+    case File.read(filename) do
+      {:ok, binary} -> :erlang.binary_to_term binary
+      {:error, _reason} -> "That file does not exist!!!" # _ tells elixir there will be an element but we don't care
+    end  
+  end  
 end
 
-# Cards.deal(deck, 5) { *hand*, *deck* }
-# Cards.deal(deck, 5) { hand: [], deck: []}
 
-# pattern matching is elixirs replacement for assignment
-# [color1, color2] = ["red", "blue"]
+
+# :string is called a symbol
+
+# Pattern Matching
+
+# color = "red"
+# [color] = ["red"]
+
+# ["red", color] = ["red", "blue"]
