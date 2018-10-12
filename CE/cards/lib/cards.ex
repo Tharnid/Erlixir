@@ -80,9 +80,18 @@ defmodule Cards do
       {:error, _reason} -> "That file does not exist!!!" # _ tells elixir there will be an element but we don't care
     end  
   end  
+
+  def create_hand(hand_size) do
+    # deck = Cards.create_deck
+    # deck = Cards.shuffle(deck)
+    # hand = Cards.deal(deck, hand_size)
+
+    Cards.create_deck
+    |> Cards.shuffle
+    |> Cards.deal(hand_size)
+  end
+
 end
-
-
 
 # :string is called a symbol
 
