@@ -1,11 +1,23 @@
 defmodule Cards do
 
+  @moduledoc """ 
+  
+    Provides methods for creating and handling a deck of cards
+
+  """
+
+  # mix docs - creates documentation
+
   def hello do
     "hi from Elixir!!!"
     # Cards.hello
   end
 
   # list of playing cards
+  @doc """ 
+    Returns a list of strings representing playing cards
+  
+  """
   def create_deck do
     values = ["Ace", "King", "Two", "Three", "Four", "Five"]
     suits = ["Spades", "Clubs", "Hearts", "Diamonds"]
@@ -46,6 +58,20 @@ defmodule Cards do
   def contains?(deck, card) do # ? return T or F...boolean 
     Enum.member?(deck, card)
   end
+
+   @doc """ 
+    Divides a deck into a hand and the rest of the cards
+    The `hand_size` argument indicates how many cards should be in the hand
+  
+      ## Examples 
+
+            iex> deck = Cards.create_deck
+            iex> {hand, deck} = Cards.deal(deck, 1)
+            iex> hand 
+            ["Ace of Spades"]
+  """ 
+
+
 
   def deal(deck, hand_size) do
     Enum.split(deck, hand_size) # hand is always index 0 Pattern Matching
