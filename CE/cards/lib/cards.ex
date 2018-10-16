@@ -22,25 +22,6 @@ defmodule Cards do
     values = ["Ace", "King", "Two", "Three", "Four", "Five"]
     suits = ["Spades", "Clubs", "Hearts", "Diamonds"]
 
-    # iterate over collection elements
-    # list comprehension
-    # for value <- values do 
-
-    #   for suit <- suits do # essentially a mapping function
-    #     "#{value} of #{suit}"
-    #   end
-
-    # end      
-
-    # not a bad solution
-    # cards = for value <- values do
-    #   for suit <- suits do
-    #     "#{value} of #{suit}"
-    #   end
-    # end
-
-    # List.flatten(cards)
-
     # best version
     for suit <- suits, value <- values do
       "#{value} of #{suit}"
@@ -54,6 +35,15 @@ defmodule Cards do
   def shuffle(deck) do
     Enum.shuffle(deck)
   end
+
+  @doc """ 
+    Determine whether a deck contains a given card
+  
+    ## Examples
+          iex> deck = Cards.create_deck
+          iex> Cards.contains?(deck, "Ace of Spades")
+          true
+  """
 
   def contains?(deck, card) do # ? return T or F...boolean 
     Enum.member?(deck, card)
