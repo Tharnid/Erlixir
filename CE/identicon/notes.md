@@ -18,3 +18,6 @@ iex(2)> Base.encode16(hash)
 iex(3)> :binary.bin_to_list(hash)
 [114, 179, 2, 191, 41, 122, 34, 138, 117, 115, 1, 35, 239, 239, 124, 65]
 
+### Grid Coloring
+
+if even we will color the square
