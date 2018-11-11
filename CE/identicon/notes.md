@@ -21,3 +21,9 @@ iex(3)> :binary.bin_to_list(hash)
 ### Grid Coloring
 
 if even we will color the square
+
+## Struct
+
+Map used to stored data in Elixir application
+ - No instance of image that has methods attached to it
+ - Does not exist in functional programming
