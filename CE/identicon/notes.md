@@ -27,3 +27,5 @@ if even we will color the square
 Map used to stored data in Elixir application
  - No instance of image that has methods attached to it
  - Does not exist in functional programming
+
+ Send the numbers to another function which will help us pick out the colors
