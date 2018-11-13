@@ -5,13 +5,11 @@ defmodule Identicon do
     |> pick_color
   end
 
-  def pick_color(image) do
+  def pick_color(%Identicon.Image{hex: [r, g, b | _tail]} = image) do
     # get RGB
     # red = image.hex[0]
-    %Identicon.Image{hex: [r, g, b | _tail]} = image
-
-    # return r g b
-    [r, g, b ]
+    # %Identicon.Image{hex: [r, g, b | _tail]} = image
+    %Identicon.Image{image | color: {r, g, b}} # use tuple when each element has meaning
   end
 
   def hash_iput(input) do
