@@ -29,3 +29,7 @@ Map used to stored data in Elixir application
  - Does not exist in functional programming
 
  Send the numbers to another function which will help us pick out the colors
+
+ ## functions
+
+ - very important
