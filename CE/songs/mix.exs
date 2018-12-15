@@ -1,8 +1,8 @@
-defmodule Discuss.Mixfile do
+defmodule Songs.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :discuss,
+    [app: :songs,
      version: "0.0.1",
      elixir: "~> 1.2",
      elixirc_paths: elixirc_paths(Mix.env),
@@ -17,7 +17,7 @@ defmodule Discuss.Mixfile do
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [mod: {Discuss, []},
+    [mod: {Songs, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
                     :phoenix_ecto, :postgrex]]
   end
@@ -32,7 +32,8 @@ defmodule Discuss.Mixfile do
   defp deps do
     [{:phoenix, "~> 1.2.5"},
      {:phoenix_pubsub, "~> 1.0"},
-     {:phoenix_ecto, ">= 3.2.0 and < 3.5.0"},
+     {:ecto_sql, "~> 3.0"},
+     {:phoenix_ecto, "~> 4.0"},
      {:postgrex, ">= 0.0.0"},
      {:phoenix_html, "~> 2.6"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
