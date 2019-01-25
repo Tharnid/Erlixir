@@ -17,6 +17,7 @@ defmodule Songs.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/songs/new", SongController, :new
   end
 
   # Other scopes may use custom stacks.

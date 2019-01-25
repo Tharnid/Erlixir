@@ -1,0 +1,1 @@
+Discuss.TopicController.new/2 (the two is the number of arguments)
