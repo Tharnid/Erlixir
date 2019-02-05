@@ -1,7 +1,11 @@
 defmodule Songs.SongController do
   use Songs.Web, :controller
 
-  def new(conn, params) do
+  alias Songs.Song
 
+  def new(conn, params) do
+    changset = Song.changeset(%Song{}, %{})
+
+    render conn, "new.html"
   end
 end
